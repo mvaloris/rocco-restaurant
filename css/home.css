@@ -1,0 +1,143 @@
+/* Home Section */
+h1 {
+    font-size: 60px;
+    font-weight: 300;
+}
+
+h2 {
+    font-family: 'Parisienne', cursive;
+    color: #fcda9a;
+    font-size:40px;
+    line-height:0;
+}
+
+h3 {
+    font-weight:300;
+    font-size: 30px;
+    font-family: 'Parisienne', cursive;
+}
+.title-separator {
+    width: 100px;
+    color:#fff;
+    margin: 20px auto;
+}
+.fa-angle-down {
+    margin-top: 50px;
+}
+.fa-angle-down:hover {
+    color:#fcda9a;
+}
+.home-container {
+    background-image: url('../img/italian-food-prep.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+#home {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    color: #fff; 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: 200px;
+    grid-template-areas: 
+    ". a a ."
+    ". a a .";
+    margin-top: 20px;
+}
+
+.home-content {
+    grid-area: a;
+    align-self: center;
+    justify-self: center;
+    border: 1px solid #fff;
+    padding: 80px 80px 60px 80px;
+}
+
+/* About & Menu Sections */
+#about, #menu {
+    padding: 40px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.about-photo {
+    padding: 0 40px 0 0;
+}
+.menu-photo {
+    padding: 0 0 0 40px;
+}
+.about-photo img, .menu-photo img {
+    width: 100%;
+}
+
+.about-content, .menu-content {
+    text-align:center;
+    align-self: center;
+    padding: 0 40px;
+}
+
+/* Photo separator */
+#photo-banner-one {
+    background-image: url('../img/dining-at-rocco.jpg');
+     /* Create the parallax scrolling effect */
+     background-attachment: fixed;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+    height: 300px;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.photo-banner-content {
+    text-align:center;
+}
+
+.photo-banner-content h1 {
+    color: #fff;
+    font-size:30px;
+    line-height: 2.3;
+}
+
+#photo-banner-two {
+    background-image: url('../img/rocco-exterior.jpg');
+     /* Create the parallax scrolling effect */
+     background-attachment: fixed;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+    height: 300px;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+
+/* Footer Section */
+
+footer {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    padding: 50px;
+    background: #111111;
+    color: #fff;
+}
+
+.hours {
+    grid-column-end: 4;
+    line-height: 1.8;
+}
+
+.gold-text {
+    color: #fcda9a;
+}
+a.phone-number {
+    color: #fcda9a;
+}
+
+a.phone-number:hover {
+    opacity: 0.7;
+}
