@@ -1,6 +1,6 @@
 /* Home Section */
 h1 {
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 300;
 }
 
@@ -16,11 +16,18 @@ h3 {
     font-size: 30px;
     font-family: 'Parisienne', cursive;
 }
-.title-separator {
+.title-seperator-white {
     width: 100px;
     color:#fff;
     margin: 20px auto;
 }
+
+.title-seperator-gold {
+    width: 100px;
+    color:#ce9c24;
+    margin: 10px auto;
+}
+
 .fa-angle-down {
     margin-top: 50px;
 }
@@ -60,15 +67,17 @@ h3 {
 #about, #menu {
     padding: 40px;
     display:grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .about-photo {
     padding: 0 40px 0 0;
 }
+
 .menu-photo {
     padding: 0 0 0 40px;
 }
+
 .about-photo img, .menu-photo img {
     width: 100%;
 }
@@ -78,6 +87,55 @@ h3 {
     align-self: center;
     padding: 0 40px;
 }
+
+.menu-photo {
+    order: 2;
+}
+.menu-content {
+    order: 1;
+}
+
+
+@media screen and (max-width: 850px) {
+    .about-content, .menu-content {
+        padding: 0;
+    }
+    h2.content-header {
+        font-size: 40px;
+    }
+    h1.content-header {
+        font-size: 30px;
+    }
+    .title-separator-dark {
+        margin: 5px auto;
+    }
+    p.content-paragraph {
+        margin: 20px 0;
+    }
+    .main-btn {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #about, #menu{
+        grid-template-columns:1fr;
+    }
+    .about-photo, .menu-photo {
+        padding: 0;
+    }
+
+    .about-content, .menu-content {
+        margin:50px 0 20px 0
+    }
+    .menu-photo {
+        order: 1;
+    }
+    .menu-content {
+        order: 2;
+    }
+}
+
 
 /* Photo separator */
 #photo-banner-one {
@@ -121,7 +179,7 @@ h3 {
 footer {
     display:grid;
     grid-template-columns:1fr 1fr;
-    padding: 50px;
+    padding: 30px 50px 50px 50px;
     background: #111111;
     color: #fff;
 }
@@ -129,7 +187,9 @@ footer {
 .hours {
     grid-column-end: 4;
     line-height: 1.8;
+    margin-top: 20px;
 }
+
 
 .gold-text {
     color: #fcda9a;
@@ -140,4 +200,16 @@ a.phone-number {
 
 a.phone-number:hover {
     opacity: 0.7;
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        grid-template-columns: 0;
+        text-align:center;
+    }
+
+    .hours {
+        grid-column-end:1;
+        margin-top: 40px;
+    }
 }

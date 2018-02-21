@@ -26,12 +26,6 @@ body, html {
     color: #fff;
 }
 
-.title-separator-dark {
-    width: 100px;
-    color:#ce9c24;
-    margin: 10px auto;
-}
-
 h1.content-header {
     font-size: 35px;
     line-height:1.5;
@@ -47,33 +41,135 @@ p.content-paragraph {
     margin: 40px 0 10px 0;
 }
 
-/* Header section */
-header {
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    padding: 30px 50px;
-}
+/* NAVIGATION */
+#nav-container > nav > ul {
+    list-style-type: none;
+  }
 
-.active {
-    text-decoration: underline;
-}
+  #nav-container {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 20px 40px;
+  }
+  
+  #nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-.logo img {
-    width:200px;
-}
+    h1.logo a {
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Lora', serif;
+      margin: 0;
+      font-size: 50px;
 
-nav {
-    grid-column-end:4;
-    align-self: center;
-}
+  }
 
-nav a {
+  #navigation {
+      display:flex;
+      align-items:center;
+  }
+  
+  #nav-logo {
     color: #fff;
-    text-decoration:none;
-    margin: 0 15px; 
-}
-
-nav a:hover {
+    text-decoration: none;
+  }
+  #nav-logo:hover {
+    color: #666;
+  }
+  
+  .nav-ul {
+    display: flex;
+    max-width: 700px;
+    margin-top: 10px;
+  }
+  
+  .nav-ul > li {
+    display: flex;
+  }
+  
+  .nav-link {
+    flex: 1;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1rem;
+    transition: 200ms;
+  }
+  
+  .nav-link:hover {
+    background-color: transparent;
     text-decoration:underline;
-     align-self: center;
-}
+  }
+  
+  .active-link {
+    background-color:transparent;
+    text-decoration:underline;
+    color: #fcda9a;
+  }
+  
+  /* END NAVIGATION */
+
+  /* MOBILE MENU */
+@media screen and (max-width: 700px) {
+  
+    #nav-container {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    #nav-menu-button {
+      padding: 1rem 2rem;
+      background-color: transparent;
+      cursor: pointer;
+      color: #fff;
+    }
+    
+    .nav-ul {
+      display: block;
+      flex-direction: column;
+      overflow-y: scroll;
+      direction: rtl;
+      max-height: 80vh;
+    }
+    
+    .hide-ul {
+      max-height: 0vh;
+    }
+    
+    .nav-link {
+      padding: 1rem;
+      font-size: 1.3rem;
+      border-bottom: 1px solid #f4f4f4;
+    }
+
+    .fa-lg {
+        margin-top: 10px;
+    }
+  }
+  /* END MOBILE MENU */
+  
+  /* DESKTOP MENU */
+  @media screen and (min-width: 701px) {
+    
+    #nav-menu-button {
+      display: none;
+    }
+    
+    .nav-link {
+      padding: 1rem 0 1rem 2.5rem;
+    }
+
+  }
+  
+  /* This moves the logo so that it's not touching the left side */
+  @media screen and (max-width: 1040px) {
+    #nav-logo {
+      margin-left: 1rem;
+    }
+  }
+  /* END DESKTOP MENU */
